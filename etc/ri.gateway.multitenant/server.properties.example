@@ -1,10 +1,5 @@
 remote-gateway-host=localhost
 socket-port=8181
-import-security-constraint-allow=.*
-export-security-constraint-allow=.*
-import-security-constraint-deny=none
-export-security-constraint-deny=none
+security-definition-file=none
 hash-key=temporary-key
 connection-mode=server
-routing-mode=router
-
