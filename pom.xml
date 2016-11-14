@@ -194,8 +194,15 @@
                     <bootFeatures>
                         <feature>standard</feature>
                         <feature>management</feature>
+                        <feature>uAAL-MW</feature>
                     </bootFeatures>
                     <!-- <installedFeatures/> -->
+					<installedFeatures>
+                        <feature>uAAL-Ont.PhWorld</feature>
+                        <feature>uAAL-Ont.Device</feature>
+                        <feature>uAAL-Ont.CHe</feature>
+                        <feature>uAAL-Ont.Profile</feature>
+					</installedFeatures>
                 </configuration>
             </plugin>
         </plugins>
