@@ -22,7 +22,7 @@
 
     <groupId>org.universAAL</groupId>
     <artifactId>distro.karaf</artifactId>
-    <version>2.0.0</version>
+    <version>3.1.0</version>
 	<packaging>pom</packaging>
 
   <properties>
@@ -183,9 +183,7 @@
            <configuration>
               <descriptors>
                 <descriptor>mvn:org.apache.karaf/apache-karaf/${karaf.version}/xml/features</descriptor>
-                <descriptor>mvn:org.universAAL.middleware/mw.karaf.feature/${project.version}/xml/features</descriptor>
-                <descriptor>mvn:org.universAAL.ui/ui.karaf.feature/${project.version}/xml/features</descriptor>
-                <descriptor>mvn:org.universAAL.lddi/lddi.karaf.feature/${project.version}/xml/features</descriptor>
+                <descriptor>mvn:org.universAAL/uAAL.karaf.feature/${project.version}/xml/features</descriptor>
               </descriptors>
               <features>
                 <feature>uAAL-MW</feature>
