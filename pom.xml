@@ -22,7 +22,7 @@
 
     <groupId>org.universAAL</groupId>
     <artifactId>distro.karaf</artifactId>
-    <version>3.4.1-SNAPSHOT</version>
+    <version>3.4.0</version>
     <packaging>karaf-assembly</packaging>
 
     <name>universAAL Karaf Distribution</name>
@@ -138,7 +138,7 @@
         <dependency>
             <groupId>org.universAAL</groupId>
             <artifactId>uAAL.karaf.feature</artifactId>
-            <version>3.4.1-SNAPSHOT</version>
+            <version>3.4.0</version>
             <classifier>features</classifier>
             <type>xml</type>
             <scope>runtime</scope>
