@@ -217,13 +217,14 @@
                         <feature>uAAL-MW</feature>
                     </bootFeatures>
                     <!-- <installedFeatures/> -->
-					<installedFeatures>
-                        <feature>uAAL-Ont.PhWorld</feature>
-                        <feature>uAAL-Ont.Device</feature>
-                        <feature>uAAL-Ont.CHe</feature>
-                        <feature>uAAL-Ont.Profile</feature>
-					</installedFeatures>
+		    <installedFeatures>
+	                <feature>uAAL-Ont.PhWorld</feature>
+	                <feature>uAAL-Ont.Device</feature>
+	                <feature>uAAL-Ont.CHe</feature>
+	                <feature>uAAL-Ont.Profile</feature>
+		    </installedFeatures>
                 </configuration>
+	   </plugin>
 	<!-- TODO look into maven-docker plugins to automatically build and deploy docker.
 		https://dmp.fabric8.io/
 		https://github.com/spotify/docker-maven-plugin
