@@ -188,6 +188,22 @@
                             <goal>resources</goal>
                         </goals>
                     </execution>
+		      <execution>
+			<id>copy-docker</id>
+			<phase>validate</phase>
+			<goals>
+			  <goal>copy-resources</goal>
+			</goals>
+			<configuration>
+			  <outputDirectory>${basedir}/target</outputDirectory>
+			  <resources>
+			    <resource>
+				<directory>src/main/docker</directory>
+				<filtering>true</filtering>
+			    </resource>
+			  </resources>
+			</configuration>
+		      </execution>
                 </executions>
             </plugin>
             <plugin>
@@ -208,7 +224,10 @@
                         <feature>uAAL-Ont.Profile</feature>
 					</installedFeatures>
                 </configuration>
-            </plugin>
+	<!-- TODO look into maven-docker plugins to automatically build and deploy docker.
+		https://dmp.fabric8.io/
+		https://github.com/spotify/docker-maven-plugin
+	-->
         </plugins>
     </build>
 
