@@ -22,14 +22,14 @@
 
     <groupId>org.universAAL</groupId>
     <artifactId>distro.karaf</artifactId>
-    <version>3.4.1-SNAPSHOT</version>
+    <version>3.4.2-SNAPSHOT</version>
     <packaging>karaf-assembly</packaging>
 
     <name>universAAL Karaf Distribution</name>
     <description>universAAL Karaf Distribution</description>
 
     <properties>
-	<karaf.version>3.0.8</karaf.version>
+	<karaf.version>3.0.9</karaf.version>
     </properties>
     
     <repositories>
