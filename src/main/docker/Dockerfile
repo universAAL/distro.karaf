@@ -5,7 +5,8 @@ LABEL maintainer="amedrano@lst.tfo.upm.es"
 RUN mkdir /uAAL
 COPY assembly/ /uAAL/
 
-RUN ls -lha /uAAL/
+#RUN ls -lha /uAAL/
+#RUN chmod +x /uAAL/bin
 
 VOLUME ["/uAAL/data"]
 VOLUME ["/uAAL/etc"]
