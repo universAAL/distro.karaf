@@ -2,6 +2,15 @@ FROM openjdk:8-jdk
 LABEL maintainer="amedrano@lst.tfo.upm.es"
 #ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
 
+## To use Apache as proxy (for example to add tls tunneling, see apache.conf file) un-comment the next block (and switch CMD statement)
+##install apache and add proxies
+#RUN apt-get update && apt-get install -y --no-install-recommends apache2 && \
+#	a2enmod proxy && a2enmod proxy_http && \
+#	rm -rf /etc/apache2/sites-enabled/*
+#COPY ./apache.conf /etc/apache2/sites-available/uaal.conf
+#
+#COPY ./apache.conf /etc/apache2/sites-enabled/uaal.conf 
+
 RUN mkdir /uAAL
 COPY assembly/ /uAAL/
 
@@ -19,15 +28,5 @@ EXPOSE 8081 9000
 RUN sed -i "21s/out/stdout/" /uAAL/etc/org.ops4j.pax.logging.cfg;
 
 CMD ["/uAAL/bin/karaf"]
-
-## To use Apache as proxy (for example to add tls tunneling, see apache.conf file) comment previous CMD line and un-comment the next block
-
-##install apache and add proxies
-#RUN apt-get update && apt-get install -y --no-install-recommends apache2 && \
-#	a2enmod proxy && a2enmod proxy_http && \
-#	rm -rf /etc/apache2/sites-enabled/*
-#COPY ./apache.conf /etc/apache2/sites-available/uaal.conf
-#
-#RUN ln -s /etc/apache2/sites-available/uaal.conf /etc/apache2/sites-enabled/uaal.conf 
-#
+# When using Apache use the following instead
 #CMD service apache2 start && /uAAL/bin/karaf
