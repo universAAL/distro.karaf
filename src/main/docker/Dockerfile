@@ -2,7 +2,7 @@ FROM openjdk:8-jdk
 LABEL maintainer="amedrano@lst.tfo.upm.es"
 #ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
 
-## To use Apache as proxy (for example to add tls tunneling, see apache.conf file) un-comment the next block (and switch CMD statement)
+## To use Apache as proxy (for example to add tls tunneling, see apache.conf file) un-comment the next block (expose port 80 and switch CMD statement)
 ##install apache and add proxies
 #RUN apt-get update && apt-get install -y --no-install-recommends apache2 && \
 #	a2enmod proxy && a2enmod proxy_http && \
@@ -24,6 +24,8 @@ VOLUME ["/uAAL/deploy"]
 EXPOSE 8081 9000
 #TODO expose uAAL discovering and peering ports
 #EXPOSE 1099 8101 44444 # Karaf ports
+#Expose port 80 when using Apache a s proxy
+#EXPOSE 80
 
 RUN sed -i "21s/out/stdout/" /uAAL/etc/org.ops4j.pax.logging.cfg;
 
