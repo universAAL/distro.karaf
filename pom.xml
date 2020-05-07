@@ -219,6 +219,7 @@
                     <bootFeatures>
                         <feature>standard</feature>
                         <feature>management</feature>
+                        <feature>kar</feature>
                         <feature>uAAL-MW</feature>
                     </bootFeatures>
                     <!-- <installedFeatures/> -->
