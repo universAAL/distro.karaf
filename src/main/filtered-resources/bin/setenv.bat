@@ -16,7 +16,6 @@ rem    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 rem    See the License for the specific language governing permissions and
 rem    limitations under the License.
 rem
-
 rem
 rem handle specific scripts; the SCRIPT_NAME is exactly the name of the Karaf
 rem script; for example karaf.bat, start.bat, stop.bat, admin.bat, client.bat, ...
@@ -24,16 +23,13 @@ rem
 rem if "%KARAF_SCRIPT%" == "SCRIPT_NAME" (
 rem   Actions go here...
 rem )
-
 chcp 65001
-
 rem
 rem general settings which should be applied for all scripts go here; please keep
 rem in mind that it is possible that scripts might be executed more than once, e.g.
 rem in example of the start script where the start script is executed first and the
 rem karaf script afterwards.
 rem
-
 rem
 rem The following section shows the possible configuration options for the default 
 rem karaf scripts
@@ -65,4 +61,3 @@ rem Additional available Karaf options
 rem SET KARAF_OPTS
 rem Enable debug mode
 rem SET KARAF_DEBUG
-
